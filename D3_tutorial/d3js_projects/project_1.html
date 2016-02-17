@@ -7,7 +7,6 @@
 </head>
 <body>
 
-<p>Hello!</p>
 
 <hr>
 
@@ -42,6 +41,22 @@
             .attr("r", 25)
             .style("fill", "purple");
 
+
+    bodySelection.append("hr");
+
+    var theData = [1, 2, 3]
+
+    // The three virtual selections are enter, update and exit.
+    // The enter selection contains placeholders for any missing elements.
+    // The update selection contains existing elements, bound to data.
+    // Any remaining elements end up in the exit selection for removal.
+
+
+    var p = d3.select("body").selectAll("p")
+            .data(theData)
+            .enter()
+            .append("p")
+            .text("hello ");
 
 </script>
 
